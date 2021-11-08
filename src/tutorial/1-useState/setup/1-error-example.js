@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const ErrorExample = () => {
-  return <h2>useState error example</h2>;
-};
+  const [text, setText] = useState('Hellow')
+
+  const Change = () => {
+    if (text == "Hellow") {
+      setText("Goodby")
+    } else {
+      setText('Hellow')
+    }
+
+  }
+  return (
+    <React.Fragment>
+      <h1>{text}</h1>
+      <button className="btn" onClick={Change}>exchange button</button>
+    </React.Fragment>
+  )
+}
 
 export default ErrorExample;
