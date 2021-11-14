@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 
 const ErrorExample = () => {
-  const [text, setText] = useState('Hellow')
-
-  const Change = () => {
-    if (text == "Hellow") {
-      setText("Goodby")
+  const [text, setText] = useState("hello world")
+  const handleClick = () => {
+    if (text == "hello world") {
+      setText('Hello Sanya')
     } else {
-      setText('Hellow')
+      setText("hello world")
     }
-
   }
+
   return (
     <React.Fragment>
       <h1>{text}</h1>
-      <button className="btn" onClick={Change}>exchange button</button>
+      <btn className="btn" onClick={handleClick}>change button</btn>
     </React.Fragment>
   )
 }
